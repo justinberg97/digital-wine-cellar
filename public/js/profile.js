@@ -1,14 +1,18 @@
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const maker = document.querySelector('#project-maker').value.trim();
+  const grape = document.querySelector('#project-grape').value.trim();
+  const vintage_date = document.querySelector('#project-vintage').value.trim();
+  const abv = document.querySelector('#project-abv').value.trim();
+  const rating = document.querySelector('#project-rating').value.trim();
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
+  if (name && maker && rating && grape && vintage_date && abv) {
+    const response = await fetch(`/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({ name, maker, grape, vintage_date, abv, rating }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -42,6 +46,6 @@ document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.project-list')
+//   // .addEventListener('click', delButtonHandler);
