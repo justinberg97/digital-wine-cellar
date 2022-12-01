@@ -28,7 +28,7 @@ Project.init(
       allowNull: false,
     },
     abv: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     rating: {
