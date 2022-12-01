@@ -10,7 +10,7 @@ const newFormHandler = async (event) => {
   const rating = document.querySelector('#project-rating').value.trim();
 
   if (name && maker && rating && grape && vintage_date && abv) {
-    const response = await fetch(`/projects`, {
+    const response = await fetch(`/api/projects`, {
       method: 'POST',
       body: JSON.stringify({ name, maker, grape, vintage_date, abv, rating }),
       headers: {
@@ -46,6 +46,6 @@ document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.project-list')
-//   // .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);

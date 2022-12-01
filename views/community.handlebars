@@ -1,0 +1,17 @@
+{{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Community Projects:</h3>
+
+    {{#each projects as |project|}}
+      <div>
+        <h3>dispaly pls</h3>
+        <p>{{name}}</p>
+        <p>{{maker}}</p>
+        <p>{{grape}}</p>
+        <p>{{vintage_date}}</p>
+        <p>{{abv}}</p>
+        <p>{{rating}}</p>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
