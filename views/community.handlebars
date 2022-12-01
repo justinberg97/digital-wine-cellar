@@ -1,9 +1,7 @@
-{{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Community Projects:</h3>
-
-    {{#each projects as |project|}}
-      <div>
+{{!-- <div>
+  <h3>whoeve threw that paper</h3>
+  <h1></h1>
+  <div>
         <h3>dispaly pls</h3>
         <p>{{name}}</p>
         <p>{{maker}}</p>
@@ -12,6 +10,16 @@
         <p>{{abv}}</p>
         <p>{{rating}}</p>
       </div>
+</div> --}}
+
+{{#each projects as |project|}}
+      <div>
+        <h3>uploaded by: {{user.name}}</h3>
+        <p>{{name}}</p>
+        <p>{{maker}}</p>
+        <p>{{grape}}</p>
+        <p>{{vintage_date}}</p>
+        <p>{{abv}}</p>
+        <p>{{rating}}</p>
+      </div>
     {{/each}}
-  </div>
-{{/if}}
