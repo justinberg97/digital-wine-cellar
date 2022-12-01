@@ -9,7 +9,7 @@ const communityRoutes = require('./community-routes')
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 router.use('/profile', profileRoutes);
-router.use('/projects', descriptionRoutes)
+router.use('/bottles', descriptionRoutes)
 router.use('/community', communityRoutes)
 
 

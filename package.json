@@ -1,5 +1,5 @@
 {
-  "name": "project-2",
+  "name": "bottle-2",
   "version": "1.0.0",
   "description": "HELLO",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justinberg97/project-2.git"
+    "url": "git+https://github.com/justinberg97/bottle-2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/justinberg97/project-2/issues"
+    "url": "https://github.com/justinberg97/bottle-2/issues"
   },
-  "homepage": "https://github.com/justinberg97/project-2#readme",
+  "homepage": "https://github.com/justinberg97/bottle-2#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",

@@ -2,15 +2,15 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const maker = document.querySelector('#project-maker').value.trim();
-  const grape = document.querySelector('#project-grape').value.trim();
-  const vintage_date = document.querySelector('#project-vintage').value.trim();
-  const abv = document.querySelector('#project-abv').value.trim();
-  const rating = document.querySelector('#project-rating').value.trim();
+  const name = document.querySelector('#bottle-name').value.trim();
+  const maker = document.querySelector('#bottle-maker').value.trim();
+  const grape = document.querySelector('#bottle-grape').value.trim();
+  const vintage_date = document.querySelector('#bottle-vintage').value.trim();
+  const abv = document.querySelector('#bottle-abv').value.trim();
+  const rating = document.querySelector('#bottle-rating').value.trim();
 
   if (name && maker && rating && grape && vintage_date && abv) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/bottles`, {
       method: 'POST',
       body: JSON.stringify({ name, maker, grape, vintage_date, abv, rating }),
       headers: {
@@ -21,7 +21,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create bottle');
     }
   }
 };
@@ -30,22 +30,22 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/bottles/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete bottle');
     }
   }
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-bottle-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.bottle-list')
   .addEventListener('click', delButtonHandler);

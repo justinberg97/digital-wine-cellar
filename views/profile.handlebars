@@ -8,59 +8,59 @@
   <div class="col-md-6">
     <h3>Enter a New Bottle:</h3>
 
-    <form class="form new-project-form">
+    <form class="form new-bottle-form">
       <div class="form-group">
-        <label for="project-name">Name of Wine:</label>
+        <label for="bottle-name">Name of Wine:</label>
         <input
           class="form-input"
           type="text"
-          id="project-name"
-          name="project-name"
+          id="bottle-name"
+          name="bottle-name"
         />
       </div>
       <div class="form-group">
-        <label for="project-maker">Maker:</label>
+        <label for="bottle-maker">Maker:</label>
         <input
           class="form-input"
           type="text"
-          id="project-maker"
-          name="project-maker"
+          id="bottle-maker"
+          name="bottle-maker"
         />
       </div>
       <div class="form-group">
-        <label for="project-grape">Grape:</label>
+        <label for="bottle-grape">Grape:</label>
         <input
           class="form-input"
           type="text"
-          id="project-grape"
-          name="project-grape"
+          id="bottle-grape"
+          name="bottle-grape"
         />
       </div>
       <div class="form-group">
-        <label for="project-vintage">Vintage Date:</label>
+        <label for="bottle-vintage">Vintage Date:</label>
         <input
           class="form-input"
           type="text"
-          id="project-vintage"
-          name="project-vintage"
+          id="bottle-vintage"
+          name="bottle-vintage"
         />
       </div>
       <div class="form-group">
-        <label for="project-abv">ABV:</label>
+        <label for="bottle-abv">ABV:</label>
         <input
           class="form-input"
           type="text"
-          id="project-abv"
-          name="project-abv"
+          id="bottle-abv"
+          name="bottle-abv"
         />
       </div>
       <div class="form-group">
-        <label for="project-rating">Would You Purchase Again?:</label>
+        <label for="bottle-rating">Would You Purchase Again?:</label>
         <input
           class="form-input"
           type="text"
-          id="project-rating"
-          name="project-rating"
+          id="bottle-rating"
+          name="bottle-rating"
         />
       </div>
       <div class="form-group">
@@ -69,19 +69,19 @@
     </form>
   </div>
 
-  {{#if projects.length}}
-    <div class="col-md-6 project-list">
+  {{#if bottles.length}}
+    <div class="col-md-6 bottle-list">
       <h3>Your Wine Cellar:</h3>
 
-      {{#each projects as |project|}}
+      {{#each bottles as |bottle|}}
         <div class="row mb-2">
           <div class="col-md-8">
-            <h4><a href="/projects/{{project.id}}">{{project.name}}</a></h4>
+            <h4><a href="/bottles/{{bottle.id}}">{{bottle.name}}</a></h4>
           </div>
           <div class="col-md-4">
             <button
               class="btn btn-sm btn-danger"
-              data-id="{{project.id}}"
+              data-id="{{bottle.id}}"
             >DELETE</button>
           </div>
         </div>
