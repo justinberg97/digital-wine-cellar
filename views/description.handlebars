@@ -1,44 +1,10 @@
-<div>
+<div class="uk-padding-small">
   <h3>dispaly pls</h3>
-  <p>{{name}}</p>
-  <p>{{maker}}</p>
-  <p>{{grape}}</p>
-  <p>{{vintage_date}}</p>
-  <p>{{abv}}</p>
-  <p>{{rating}}</p>
+  <p>name: {{name}}</p>
+  <p>maker: {{maker}}</p>
+  <p>grape: {{grape}}</p>
+  <p>vintage date: {{vintage_date}}</p>
+  <p>abv: {{abv}}</p>
+  <p>rating: {{rating}}</p>
 </div>
 
-<div class="handle-bar">
-   {{#if projects.length}}
-    <div class="col-md-6 project-list">
-      <h3>Current Projects:</h3>
-
-      {{#each projects as |project|}}
-        <div class="row mb-2">
-          <div class="col-md-8">
-            <h4><a href="/api/project/{{project.id}}">{{project.name}}</a></h4>
-             <h2>{{project.name}}</h2>
-  <p>{{project.maker}}</p>
-  <p>{{vintage_date}}</p>
-  <p>{{project.grape}}</p>
-  <p>{{project.abv}}</p>
-  <p>{{project.rating}}</p>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  {{/if}}
-</div>
-
-  <div>
-  <form>
-  <div class="handle-bar">
-    <label for="slide-bar">1-10 best to worst</label>
-    <input type="range" class="control-range" id="ControlRange">
-  </div>
-</form>
-
-  <p>
-    <button class="btn btn-primary">Confirm</button>
-  </p>
-</div>

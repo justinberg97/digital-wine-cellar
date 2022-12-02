@@ -1,25 +1,12 @@
-{{!-- <div>
-  <h3>whoeve threw that paper</h3>
-  <h1></h1>
-  <div>
-        <h3>dispaly pls</h3>
-        <p>{{name}}</p>
-        <p>{{maker}}</p>
-        <p>{{grape}}</p>
-        <p>{{vintage_date}}</p>
-        <p>{{abv}}</p>
-        <p>{{rating}}</p>
-      </div>
-</div> --}}
 
 {{#each projects as |project|}}
-      <div>
+      <div class="uk-padding-small">
         <h3>uploaded by: {{user.name}}</h3>
-        <p>{{name}}</p>
-        <p>{{maker}}</p>
-        <p>{{grape}}</p>
-        <p>{{vintage_date}}</p>
-        <p>{{abv}}</p>
-        <p>{{rating}}</p>
+        <p>name: {{name}}</p>
+        <p>maker: {{maker}}</p>
+        <p>grape: {{grape}}</p>
+        <p>vintage date: {{vintage_date}}</p>
+        <p>ABV: {{abv}}</p>
+        <p>Rating: {{rating}}</p>
       </div>
     {{/each}}
