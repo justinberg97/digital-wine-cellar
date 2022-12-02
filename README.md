@@ -16,5 +16,8 @@ This Digital Wine Cellar, allows the user to enter information on wine bottles t
 ![cellar](/project-2/assets/cellar.png)
 
 
+<img width="1440" alt="Screen Shot 2022-12-01 at 8 39 49 PM" src="https://user-images.githubusercontent.com/110484382/205204613-1956d69c-3893-4e92-b72b-4f857f3136bf.png">
+
+
 # links
 https://github.com/justinberg97/digital-wine-cellar
