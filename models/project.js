@@ -32,7 +32,7 @@ Project.init(
       allowNull: false,
     },
     rating: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,
